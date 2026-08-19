@@ -1,0 +1,177 @@
+/* =====================================================
+   Purest Solutions — Onboarding (3 splash screens)
+   =====================================================
+   Source: Figma (TPS project, node 0-1)
+   Notes for devs:
+   - Slides sit in a horizontal flex track. JS translates
+     the track left/right to move between them — same
+     pattern used by most carousel/onboarding libraries.
+   - Colors/gradient are estimated from the screenshot.
+     Replace with exact Figma tokens where available.
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* ---------- Phone frame ---------- */
+.phone {
+  width: 375px;
+  max-width: 100%;
+  height: 720px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 0;
+  }
+  .phone {
+    border-radius: 0;
+    box-shadow: none;
+    height: 100vh;
+  }
+}
+
+/* ---------- Carousel mechanics ---------- */
+/* .carousel clips overflow so only one slide is visible at a
+   time. .track holds all slides in a row; JS moves it with
+   a CSS transform. */
+.carousel {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s ease;
+  /* JS sets transform: translateX(-100% * currentSlide) */
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  padding: 16px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* TODO: confirm exact gradient stops from Figma Dev Mode */
+  background: linear-gradient(180deg, #ffffff 0%, #eaf3fb 55%, #a9d3e8 100%);
+}
+
+.status-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.slide-title {
+  align-self: flex-start;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #3a4a5c;
+  margin-bottom: 20px;
+}
+
+.slide-title strong {
+  font-weight: 700;
+  color: #1a2733;
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 260px;
+  flex: 1;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.slide-copy {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #56636e;
+  max-width: 280px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Sign up button (final slide) ---------- */
+.signup-btn {
+  width: 100%;
+  max-width: 260px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2f9bc9;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.signup-btn:hover {
+  background: #2789b3;
+}
+
+.signup-btn:active {
+  transform: scale(0.97);
+}
+
+.signup-btn:focus-visible {
+  outline: 2px solid #1a2733;
+  outline-offset: 2px;
+}
+
+/* ---------- Dot pagination ---------- */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none; /* dots are visual-only on the final slide,
+                            where they'd otherwise sit under the
+                            button; re-enabled selectively below */
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(58, 74, 92, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.dot.active {
+  background: #3a4a5c;
+  transform: scale(1.3);
+}

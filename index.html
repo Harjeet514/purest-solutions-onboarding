@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Purest Solutions — Onboarding</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- All three slides live inside one track. JS shifts the
+         track left/right to reveal each slide — this is the
+         standard pattern for a carousel/onboarding flow. -->
+    <div class="carousel">
+      <div class="track" id="track">
+
+        <!-- Slide 1 -->
+        <section class="slide">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>••• 📶 🔋</span>
+          </div>
+
+          <h1 class="slide-title">
+            the<br />
+            <strong>purest</strong><br />
+            solutions
+          </h1>
+
+          <!-- TODO: replace with real product photography export -->
+          <img
+            class="slide-image"
+            src="images/slide-1-products.png"
+            alt="Purest Solutions skincare product lineup"
+          />
+
+          <p class="slide-copy">
+            Unlock radiant, healthy skin with Purest Solutions—where
+            nature meets science in premium skincare.
+          </p>
+        </section>
+
+        <!-- Slide 2 -->
+        <section class="slide">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>••• 📶 🔋</span>
+          </div>
+
+          <h1 class="slide-title">
+            AI<br />
+            <strong>Scan</strong>
+          </h1>
+
+          <!-- TODO: replace with real photography export -->
+          <img
+            class="slide-image"
+            src="images/slide-2-aiscan.png"
+            alt="Person using phone for AI skin scan"
+          />
+
+          <p class="slide-copy">
+            Discover your perfect skincare with our AI Skin Scanner—
+            tailored technology for your unique skin profile.
+          </p>
+        </section>
+
+        <!-- Slide 3 -->
+        <section class="slide">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>••• 📶 🔋</span>
+          </div>
+
+          <h1 class="slide-title">
+            Skin<br />
+            <strong>Care</strong>
+          </h1>
+
+          <!-- TODO: replace with real photography export -->
+          <img
+            class="slide-image"
+            src="images/slide-3-couple.png"
+            alt="Couple using Purest Solutions skincare product together"
+          />
+
+          <p class="slide-copy">
+            Experience skincare excellence with Purest Solutions—where
+            purity meets quality.
+          </p>
+
+          <button class="signup-btn" type="button">Sign Up</button>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Dot pagination — sits outside the sliding track so it
+         stays fixed while slides move underneath it. -->
+    <div class="dots" id="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
