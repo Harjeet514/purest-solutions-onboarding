@@ -37,23 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Swipe support (touch) ---
   // Tracks the horizontal distance of a touch gesture and
   // advances/goes back a slide if the swipe was long enough.
-  let touchStartX = 0;
+  // Guarded: `track` only exists on index.html (the onboarding
+  // carousel) — without this check, calling .addEventListener on
+  // null here would throw and silently stop every script below
+  // it from running on every other page in the app.
+  if (track) {
+    let touchStartX = 0;
 
-  track.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-  });
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
 
-  track.addEventListener('touchend', (e) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    const delta = touchEndX - touchStartX;
-    const SWIPE_THRESHOLD = 50; // px — ignore small accidental drags
+    track.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const delta = touchEndX - touchStartX;
+      const SWIPE_THRESHOLD = 50; // px — ignore small accidental drags
 
-    if (delta > SWIPE_THRESHOLD) {
-      goToSlide(currentSlide - 1); // swiped right -> previous slide
-    } else if (delta < -SWIPE_THRESHOLD) {
-      goToSlide(currentSlide + 1); // swiped left -> next slide
-    }
-  });
+      if (delta > SWIPE_THRESHOLD) {
+        goToSlide(currentSlide - 1); // swiped right -> previous slide
+      } else if (delta < -SWIPE_THRESHOLD) {
+        goToSlide(currentSlide + 1); // swiped left -> next slide
+      }
+    });
+  }
 
   // Sign Up button on the final slide -> starts the skin profile flow
   const signupBtn = document.querySelector('.signup-btn');
