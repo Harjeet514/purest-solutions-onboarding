@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cleanser — Product Details — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <button class="back-btn light" aria-label="Go back" onclick="window.location.href='recommended-products.html'">&#8592;</button>
+
+      <div class="pd-image-wrap">
+        <button class="pd-favorite-btn" type="button" aria-label="Add to favorites" id="favoriteBtn">♡</button>
+        <!-- TODO: replace with real product photo export -->
+        <img src="images/product-cleanser.png" alt="Cleanser bottle" class="pd-image" />
+      </div>
+
+      <div class="pd-title-row">
+        <div>
+          <h1 class="pd-name">Cleanser</h1>
+          <p class="pd-subtitle">Probiotic Multifunctional Purifying Cleansing Oil 150 Ml</p>
+        </div>
+      </div>
+
+      <a href="reviews-rating.html" class="pd-rating-link">
+        <span class="pd-stars" aria-hidden="true">★★★★★</span>
+        <span class="pd-rating-value">4.6</span>
+        <span class="pd-rating-count">(328)</span>
+      </a>
+
+      <div class="pd-price-row">
+        <div>
+          <span class="pd-price">$15.99</span>
+          <span class="pd-price-original">$19.99</span>
+        </div>
+        <button class="cart-btn" type="button" aria-label="Add Cleanser to cart" data-product="Cleanser">🛒</button>
+      </div>
+
+      <!-- TODO: description approximated from a small screenshot —
+           confirm exact wording against Figma before finalizing -->
+      <p class="pd-description">
+        Gently cleanses the skin from makeup, excess oil, and
+        impurities. Formulated with prebiotics and probiotics, it
+        helps maintain the skin's microbe and flora balance while
+        strengthening the skin barrier and gently purifying the skin,
+        reducing the appearance of pores, balancing sebum production,
+        and preventing signs of aging for a more vibrant and bright
+        skin appearance with regular use.
+      </p>
+
+      <!-- Product info tabs -->
+      <div class="pd-tabs" id="pdTabs">
+        <button class="pd-tab active" type="button" data-tab="skin-type">Skin type</button>
+        <button class="pd-tab" type="button" data-tab="good-for">Good for</button>
+        <button class="pd-tab" type="button" data-tab="ingredients">Ingredients</button>
+        <button class="pd-tab" type="button" data-tab="how-to-use">How to use</button>
+      </div>
+
+      <div class="pd-tab-panel" data-panel="skin-type">
+        <label class="pd-checklist-item">
+          <input type="checkbox" checked disabled />
+          <span>All skin types</span>
+        </label>
+        <label class="pd-checklist-item">
+          <input type="checkbox" checked disabled />
+          <span>Oily skin</span>
+        </label>
+        <label class="pd-checklist-item">
+          <input type="checkbox" checked disabled />
+          <span>Combination skin</span>
+        </label>
+        <label class="pd-checklist-item">
+          <input type="checkbox" checked disabled />
+          <span>Sensitive skin</span>
+        </label>
+      </div>
+
+      <!-- TODO: "Good for" / "Ingredients" / "How to use" panel
+           content wasn't visible in the shared screenshot — add
+           the real content from Figma when you have it -->
+      <div class="pd-tab-panel" data-panel="good-for" hidden>
+        <p class="pd-tab-placeholder">Content for this tab not yet provided.</p>
+      </div>
+      <div class="pd-tab-panel" data-panel="ingredients" hidden>
+        <p class="pd-tab-placeholder">Content for this tab not yet provided.</p>
+      </div>
+      <div class="pd-tab-panel" data-panel="how-to-use" hidden>
+        <p class="pd-tab-placeholder">Content for this tab not yet provided.</p>
+      </div>
+
+      <!-- Shipping accordion -->
+      <div class="pd-accordion">
+        <button class="pd-accordion-header" type="button" data-accordion="standard">
+          <span>Standard Shipping?</span>
+          <span class="pd-accordion-caret">▾</span>
+        </button>
+        <div class="pd-accordion-body" data-body="standard">
+          <p>Standard shipping: $3.50</p>
+          <p>FREE shipping above $40.00</p>
+          <p>Estimated delivery time 02/02/2025–06/02/2025</p>
+        </div>
+
+        <button class="pd-accordion-header" type="button" data-accordion="express">
+          <span>Express Shipping?</span>
+          <span class="pd-accordion-caret">▸</span>
+        </button>
+        <div class="pd-accordion-body" data-body="express" hidden>
+          <!-- TODO: express shipping details not visible in the
+               screenshot (collapsed) — add once shared -->
+          <p>Details not yet provided.</p>
+        </div>
+      </div>
+
+      <!-- Similar products -->
+      <h2 class="products-heading" style="margin-top: 24px;">Similar products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="images/product-similar-1.png" alt="Probiotic Purifying Cleansing Oil bottle" class="product-image" />
+          </div>
+          <p class="product-name">Probiotic Purifying Cleansing Oil</p>
+          <div class="product-footer">
+            <span class="product-price">$15.99</span>
+            <button class="pd-favorite-btn small" type="button" aria-label="Add to favorites">♡</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="images/product-cleanser.png" alt="Hydrating Gentle Facial Cleanser bottle" class="product-image" />
+          </div>
+          <p class="product-name">Hydrating Gentle Facial Cleanser</p>
+          <div class="product-footer">
+            <span class="product-price">$19.99</span>
+            <button class="pd-favorite-btn small" type="button" aria-label="Add to favorites">♡</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

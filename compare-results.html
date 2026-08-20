@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Compare Your Results — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <div class="page-header">
+        <button class="back-btn light" aria-label="Go back" onclick="window.location.href='full-skin-report.html'">&#8592;</button>
+        <h1 class="page-title">Compare your results</h1>
+      </div>
+
+      <h2 class="products-heading">Skin comparison</h2>
+      <p class="products-subtext">
+        Track and Compare your analysed skin progress and know about
+        the progress
+      </p>
+
+      <!-- Filter tabs. Data-driven: clicking a tab updates the
+           Recent/Previous slider values below via JS. -->
+      <div class="compare-filter-row" id="compareFilters">
+        <button class="filter-pill active" type="button" data-filter="overall">Overall</button>
+        <button class="filter-pill" type="button" data-filter="redness">Redness</button>
+        <button class="filter-pill" type="button" data-filter="hydration">Hydration</button>
+        <button class="filter-pill" type="button" data-filter="dark-circles">Dark Circles</button>
+      </div>
+
+      <!-- Recent result -->
+      <div class="compare-row">
+        <div class="compare-avatar" aria-hidden="true">🙂</div>
+        <div class="compare-details">
+          <div class="compare-label">Recent</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" id="recentDot" style="left: 78%;">78</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+        </div>
+      </div>
+
+      <!-- Previous result -->
+      <div class="compare-row">
+        <div class="compare-avatar" aria-hidden="true">🙂</div>
+        <div class="compare-details">
+          <div class="compare-label-row">
+            <span class="compare-label">Previous result</span>
+            <button class="compare-date" type="button" onclick="window.location.href='previous-results-list.html'">25/01/2024 ▾</button>
+          </div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot bad" id="previousDot" style="left: 22%;">25</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+        </div>
+      </div>
+
+      <a href="preview-images.html" class="preview-link" id="previewImagesLink">+Preview images</a>
+
+      <!-- Insight box summarizing the comparison -->
+      <div class="insight-box" id="insightBox">
+        These are significant improvements like blemishes have faded,
+        fine lines softened, and overall tone become more even.
+      </div>
+
+      <!-- Suggested products (reuses 2 of the products already built
+           on recommended-products.html) -->
+      <div class="suggested-header">
+        <h2 class="products-heading">Suggested products</h2>
+        <a href="recommended-products.html" class="view-all-link">View all</a>
+      </div>
+      <p class="products-subtext">
+        Below is the recommended product list with personalized skin
+        routine. Please add your products into cart.
+      </p>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag">CLEANSER</span>
+          <div class="product-image-wrap">
+            <img src="images/product-cleanser.png" alt="Hydrating Gentle Facial Cleanser bottle" class="product-image" />
+          </div>
+          <p class="product-name">Hydrating Gentle Facial Cleanser %0.5 Hyaluronic Acid %0.5...</p>
+          <div class="product-footer">
+            <span class="product-price">$19.99</span>
+            <button class="cart-btn" type="button" aria-label="Add Hydrating Gentle Facial Cleanser to cart" data-product="Hydrating Gentle Facial Cleanser">🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-tag">TONER</span>
+          <div class="product-image-wrap">
+            <img src="images/product-toner.png" alt="Anti-Aging and Renewing Peptide Complex Serum bottle" class="product-image" />
+          </div>
+          <p class="product-name">Anti-Aging And Renewing Peptide Complex Serum 30 Ml</p>
+          <div class="product-footer">
+            <span class="product-price">$20.99</span>
+            <button class="cart-btn" type="button" aria-label="Add Anti-Aging And Renewing Peptide Complex Serum to cart" data-product="Anti-Aging And Renewing Peptide Complex Serum">🛒</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

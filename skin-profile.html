@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skin Profile — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <div class="page-header">
+        <button class="back-btn light" aria-label="Go back">&#8592;</button>
+        <h1 class="page-title">Skin Profile</h1>
+      </div>
+
+      <form class="profile-form" id="profileForm">
+
+        <!-- Gender -->
+        <fieldset class="field-group">
+          <legend class="field-label">Gender</legend>
+          <div class="pill-row">
+            <label class="pill-option">
+              <input type="radio" name="gender" value="female" checked />
+              <span class="pill-icon" aria-hidden="true">♀</span>
+              <span class="pill-text">Female</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="gender" value="male" />
+              <span class="pill-icon" aria-hidden="true">♂</span>
+              <span class="pill-text">Male</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="gender" value="transgender" />
+              <span class="pill-icon" aria-hidden="true">⚧</span>
+              <span class="pill-text">Transgender</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="gender" value="prefer-not-to-say" />
+              <span class="pill-icon" aria-hidden="true">–</span>
+              <span class="pill-text">Prefer not to say</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Age -->
+        <div class="field-group">
+          <label class="field-label" for="ageRange">Age</label>
+          <div class="age-value" id="ageValue">23 years</div>
+          <input
+            type="range"
+            id="ageRange"
+            class="age-slider"
+            min="13"
+            max="80"
+            value="23"
+          />
+        </div>
+
+        <!-- Skin type -->
+        <fieldset class="field-group">
+          <legend class="field-label">Skin type</legend>
+          <div class="pill-row">
+            <label class="pill-option">
+              <input type="radio" name="skinType" value="normal" checked />
+              <span class="pill-icon" aria-hidden="true">◐</span>
+              <span class="pill-text">Normal</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="skinType" value="dry" />
+              <span class="pill-icon" aria-hidden="true">☀</span>
+              <span class="pill-text">Dry</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="skinType" value="oily" />
+              <span class="pill-icon" aria-hidden="true">💧</span>
+              <span class="pill-text">Oily</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="skinType" value="combination" />
+              <span class="pill-icon" aria-hidden="true">◑</span>
+              <span class="pill-text">Combination</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Sensitivity -->
+        <fieldset class="field-group">
+          <legend class="field-label">Skin sensitive level?</legend>
+          <div class="radio-row">
+            <label class="radio-option">
+              <input type="radio" name="sensitivity" value="low" />
+              <span>Low</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="sensitivity" value="medium" />
+              <span>Medium</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="sensitivity" value="high" />
+              <span>High</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Skin tone -->
+        <fieldset class="field-group">
+          <legend class="field-label">Skin tone</legend>
+          <div class="tone-row">
+            <label class="tone-option">
+              <input type="radio" name="skinTone" value="fair" />
+              <span class="tone-swatch" style="background:#f2d2b6;"></span>
+              <span class="tone-text">Fair</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="skinTone" value="medium" />
+              <span class="tone-swatch" style="background:#d3a074;"></span>
+              <span class="tone-text">Medium</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="skinTone" value="tan" />
+              <span class="tone-swatch" style="background:#b97a4b;"></span>
+              <span class="tone-text">Tan</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="skinTone" value="brown" />
+              <span class="tone-swatch" style="background:#7a4a2b;"></span>
+              <span class="tone-text">Brown</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="skinTone" value="black" />
+              <span class="tone-swatch" style="background:#3b2419;"></span>
+              <span class="tone-text">Black</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Smoking -->
+        <fieldset class="field-group">
+          <legend class="field-label">Do you smoke?</legend>
+          <div class="radio-row">
+            <label class="radio-option">
+              <input type="radio" name="smokes" value="yes" />
+              <span>Yes</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="smokes" value="no" />
+              <span>No</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Medication -->
+        <div class="field-group">
+          <label class="field-label" for="medication">Are you on any medication?</label>
+          <p class="field-hint">If yes please mention what medicine you take</p>
+          <textarea
+            id="medication"
+            name="medication"
+            class="medication-input"
+            rows="3"
+            placeholder=""
+          ></textarea>
+        </div>
+
+        <button type="submit" class="primary-btn">Continue</button>
+
+      </form>
+
+      <!-- Modal: shown after tapping Continue. Offers a choice
+           between uploading a photo or taking a selfie — each
+           choice routes to a different instructions screen. -->
+      <div class="modal-overlay" id="photoModal" hidden>
+        <div class="modal-box">
+          <div class="modal-options">
+            <button class="modal-option" id="selfieOption" type="button">
+              <span class="modal-option-icon" aria-hidden="true">🤳</span>
+              <span class="modal-option-label">Take a selfie</span>
+            </button>
+            <button class="modal-option" id="uploadOption" type="button">
+              <span class="modal-option-icon" aria-hidden="true">⬆</span>
+              <span class="modal-option-label">Upload your photo</span>
+            </button>
+          </div>
+          <p class="modal-copy">
+            Your data protection is our priority. Please read our
+            <a href="#">privacy policies</a> and
+            <a href="#">terms &amp; conditions</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

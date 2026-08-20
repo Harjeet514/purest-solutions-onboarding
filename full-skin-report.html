@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Full Skin Report — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <div class="products-header">
+        <button class="icon-btn" aria-label="Close" onclick="window.location.href='skin-results.html'">&#10005;</button>
+        <h1 class="page-title">Full skin report</h1>
+        <button class="icon-btn" aria-label="Share">&#8593;</button>
+      </div>
+
+      <!-- Photo with ALL concern markers shown at once (unlike
+           skin-results.html, where only the active tab's markers
+           show). Reuses the same marker classes/positions. -->
+      <div class="report-photo">
+        <!-- TODO: replace with the user's real captured photo -->
+        <div class="marker marker-redness" style="top:52%; left:30%;"></div>
+        <div class="marker marker-redness" style="top:58%; left:22%;"></div>
+        <div class="marker marker-hydration" style="top:48%; left:70%;"></div>
+        <div class="marker marker-hydration" style="top:50%; left:26%;"></div>
+        <div class="marker marker-dark-circles" style="top:42%; left:32%;"></div>
+        <div class="marker marker-dark-circles" style="top:42%; left:66%;"></div>
+        <div class="marker marker-moisture" style="top:48%; left:26%;"></div>
+        <div class="marker marker-spots" style="top:52%; left:70%;"></div>
+        <div class="marker marker-dot-small" style="--dot-color: rgba(70,170,190,0.8); top:44%; left:36%;"></div>
+        <div class="marker marker-dot-small" style="--dot-color: rgba(70,170,190,0.8); top:44%; left:44%;"></div>
+        <div class="marker marker-dot-small" style="--dot-color: rgba(224,74,54,0.75); top:52%; left:24%;"></div>
+        <div class="marker marker-dot-small" style="--dot-color: rgba(224,74,54,0.75); top:78%; left:46%;"></div>
+        <div class="marker marker-dot-tiny" style="--dot-color: rgba(90,80,70,0.6); top:20%; left:44%;"></div>
+        <div class="marker marker-dot-tiny" style="--dot-color: rgba(90,80,70,0.6); top:56%; left:26%;"></div>
+        <div class="marker marker-dot-small" style="--dot-color: rgba(150,110,50,0.75); top:58%; left:40%;"></div>
+        <div class="marker marker-oiliness" style="top:22%; left:50%; width:55px; height:35px;"></div>
+
+        <button class="compare-btn" type="button" id="compareBtn">Compare</button>
+      </div>
+
+      <!-- Skin matrix radar chart, built from the confirmed concern
+           scores. See buildRadarChart() in js/script.js. -->
+      <div class="matrix-section">
+        <h2 class="products-heading">Skin matrix</h2>
+        <p class="products-subtext">
+          Discover your results by age and identify your skin concerns
+        </p>
+        <div class="matrix-chart-wrap">
+          <svg id="radarChart" class="matrix-chart" viewBox="0 0 220 220" aria-label="Skin concern radar chart"></svg>
+        </div>
+      </div>
+
+      <!-- Scrollable concern cause cards. Each shows a Bad/Medium/Good
+           slider and a cause description.
+           NOTE: the description text below is identical across every
+           card in the source Figma file (placeholder/lorem-ipsum
+           copy, not written per-concern yet) — see README. -->
+      <div class="causes-section">
+        <h2 class="products-heading">Skin concern causes</h2>
+
+        <div class="cause-card">
+          <div class="cause-header">Acne</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot bad" style="left: 53%;">53</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Radiance</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 84%;">84</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Oiliness</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 85%;">85</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Hydration</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot bad" style="left: 64%;">64</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Spots</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 60%;">60</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">UV Damage</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 79%;">79</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Pores</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot bad" style="left: 68%;">68</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Eyebags</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 88%;">88</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Moisture</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 86%;">86</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Redness</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 88%;">88</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Dark Circles</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 80%;">80</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <!-- TODO: exact score unconfirmed for Texture — screenshot
+             showed a red dot near "Bad" but the number wasn't
+             legible. Placed at an estimated position; confirm and
+             correct once you have the real value. -->
+        <div class="cause-card">
+          <div class="cause-header">Texture</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot bad" style="left: 20%;">–</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+        <div class="cause-card">
+          <div class="cause-header">Wrinkles</div>
+          <div class="cause-slider">
+            <div class="cause-track"></div>
+            <div class="cause-dot good" style="left: 87%;">87</div>
+          </div>
+          <div class="cause-labels"><span>Bad</span><span>Medium</span><span>Good</span></div>
+          <p class="cause-text">Due to overproduction of sebum clogged the pores and developed the acne in most of area of your skin. To remove excess oil, dirt, and dead skin cells follow our product list.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

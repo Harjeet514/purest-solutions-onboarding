@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Write a Review — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <div class="products-header">
+        <h1 class="page-title">Write a review</h1>
+        <button class="icon-btn" aria-label="Close" onclick="window.location.href='reviews-rating.html'">&#10005;</button>
+      </div>
+
+      <p class="products-subtext">
+        To post you reviews please fill out the below information.
+      </p>
+
+      <form class="review-form" id="reviewForm">
+
+        <div class="field-group">
+          <input type="text" name="name" class="text-input" placeholder="Name*" required />
+        </div>
+
+        <div class="field-group">
+          <input type="email" name="email" class="text-input" placeholder="Email Id*" required />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Rating</label>
+          <div class="star-rating" id="starRating">
+            <button type="button" class="star-btn" data-value="1" aria-label="Rate 1 star">☆</button>
+            <button type="button" class="star-btn" data-value="2" aria-label="Rate 2 stars">☆</button>
+            <button type="button" class="star-btn" data-value="3" aria-label="Rate 3 stars">☆</button>
+            <button type="button" class="star-btn" data-value="4" aria-label="Rate 4 stars">☆</button>
+            <button type="button" class="star-btn" data-value="5" aria-label="Rate 5 stars">☆</button>
+          </div>
+          <input type="hidden" name="rating" id="ratingValue" value="0" />
+        </div>
+
+        <div class="field-group">
+          <div class="textarea-wrap">
+            <textarea
+              name="review"
+              id="reviewText"
+              class="medication-input"
+              rows="5"
+              maxlength="150"
+              placeholder="Share your reviews*"
+              required
+            ></textarea>
+            <span class="char-count" id="charCount">0/150</span>
+          </div>
+        </div>
+
+        <button type="submit" class="outline-btn">Post your review</button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

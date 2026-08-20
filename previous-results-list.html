@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Choose from Previous Results — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="products-header">
+        <h1 class="page-title">Choose from previous results</h1>
+        <button class="icon-btn" aria-label="Close" onclick="window.location.href='compare-results.html'">&#10005;</button>
+      </div>
+
+      <!-- TODO: this date list is illustrative — replace with the
+           user's real scan history once available. Only 25/01/2024
+           is confirmed as a real date from the source design. -->
+      <div class="date-list">
+
+        <div class="date-group-label">January</div>
+        <button class="date-row" type="button" data-date="25/01/2024">
+          <span>25/01/2024</span>
+        </button>
+        <button class="date-row" type="button" data-date="12/01/2024">
+          <span>12/01/2024</span>
+        </button>
+
+        <div class="date-group-label">December</div>
+        <button class="date-row selected" type="button" data-date="29/12/2023">
+          <span>29/12/2023</span>
+          <span class="date-check" aria-hidden="true">✓</span>
+        </button>
+        <button class="date-row" type="button" data-date="23/12/2023">
+          <span>23/12/2023</span>
+        </button>
+        <button class="date-row" type="button" data-date="09/12/2023">
+          <span>09/12/2023</span>
+        </button>
+        <button class="date-row" type="button" data-date="02/12/2023">
+          <span>02/12/2023</span>
+        </button>
+
+        <div class="date-group-label">November</div>
+        <button class="date-row" type="button" data-date="16/11/2023">
+          <span>16/11/2023</span>
+        </button>
+
+        <div class="date-group-label">October</div>
+        <button class="date-row" type="button" data-date="20/10/2023">
+          <span>20/10/2023</span>
+        </button>
+        <button class="date-row" type="button" data-date="03/10/2023">
+          <span>03/10/2023</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

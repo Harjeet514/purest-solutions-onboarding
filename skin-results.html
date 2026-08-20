@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Skin Results — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="results-screen">
+
+      <div class="status-bar dark-text">
+        <span>9:41</span>
+        <span>••• 📶 🔋</span>
+      </div>
+
+      <div class="page-header">
+        <button class="back-btn light" aria-label="Go back" onclick="window.location.href='face-scan.html'">&#8592;</button>
+        <h1 class="page-title">Your Skin results</h1>
+      </div>
+
+      <!-- Captured photo with concern markers overlaid. In the real
+           app this is the user's actual scanned photo; markers are
+           positioned per-concern and shown/hidden by JS below. -->
+      <div class="results-photo">
+        <!-- TODO: replace with the user's real captured photo -->
+        <div class="marker marker-redness" data-concern="redness" style="top:52%; left:30%;"></div>
+        <div class="marker marker-redness" data-concern="redness" style="top:58%; left:22%;"></div>
+        <div class="marker marker-hydration" data-concern="hydration" style="top:48%; left:70%;" hidden></div>
+        <div class="marker marker-hydration" data-concern="hydration" style="top:50%; left:26%;" hidden></div>
+        <div class="marker marker-dark-circles" data-concern="dark-circles" style="top:42%; left:32%;" hidden></div>
+        <div class="marker marker-dark-circles" data-concern="dark-circles" style="top:42%; left:66%;" hidden></div>
+        <div class="marker marker-moisture" data-concern="moisture" style="top:48%; left:26%;" hidden></div>
+        <div class="marker marker-texture" data-concern="texture" style="top:40%; left:68%; width:70px; height:90px;" hidden></div>
+        <div class="marker marker-spots" data-concern="spots" style="top:52%; left:70%;" hidden></div>
+
+        <!-- Eyebags: small dots at inner/outer eye corners -->
+        <div class="marker marker-dot-small" data-concern="eyebags" style="--dot-color: rgba(70,170,190,0.8); top:44%; left:36%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="eyebags" style="--dot-color: rgba(70,170,190,0.8); top:44%; left:44%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="eyebags" style="--dot-color: rgba(70,170,190,0.8); top:45%; left:60%;" hidden></div>
+
+        <!-- Wrinkles: thin lines across forehead and cheek -->
+        <div class="marker marker-line" data-concern="wrinkles" style="--line-color: rgba(224,120,100,0.6); --line-length: 46px; --line-angle: -12deg; top:26%; left:34%;" hidden></div>
+        <div class="marker marker-line" data-concern="wrinkles" style="--line-color: rgba(224,120,100,0.6); --line-length: 30px; --line-angle: 25deg; top:38%; left:40%;" hidden></div>
+        <div class="marker marker-line" data-concern="wrinkles" style="--line-color: rgba(224,120,100,0.6); --line-length: 40px; --line-angle: 60deg; top:48%; left:44%;" hidden></div>
+
+        <!-- Acne: scattered small dots across forehead and cheek -->
+        <div class="marker marker-dot-small" data-concern="acne" style="--dot-color: rgba(224,74,54,0.75); top:22%; left:60%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="acne" style="--dot-color: rgba(224,74,54,0.75); top:52%; left:24%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="acne" style="--dot-color: rgba(224,74,54,0.75); top:56%; left:30%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="acne" style="--dot-color: rgba(224,74,54,0.75); top:76%; left:38%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="acne" style="--dot-color: rgba(224,74,54,0.75); top:78%; left:46%;" hidden></div>
+
+        <!-- Pores: many tiny dots scattered across forehead/upper cheek -->
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:20%; left:44%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:22%; left:52%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:26%; left:36%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:30%; left:58%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:56%; left:26%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:60%; left:30%;" hidden></div>
+        <div class="marker marker-dot-tiny" data-concern="pores" style="--dot-color: rgba(90,80,70,0.6); top:64%; left:24%;" hidden></div>
+
+        <!-- UV Damage: small cluster of brownish spots near nose/cheek -->
+        <div class="marker marker-dot-small" data-concern="uv-damage" style="--dot-color: rgba(150,110,50,0.75); top:58%; left:40%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="uv-damage" style="--dot-color: rgba(150,110,50,0.75); top:62%; left:44%;" hidden></div>
+        <div class="marker marker-dot-small" data-concern="uv-damage" style="--dot-color: rgba(150,110,50,0.75); top:60%; left:48%;" hidden></div>
+
+        <!-- Oiliness: yellow diffuse patches across the T-zone
+             (forehead + nose bridge) -->
+        <div class="marker marker-oiliness" data-concern="oiliness" style="top:22%; left:50%; width:55px; height:35px;" hidden></div>
+        <div class="marker marker-oiliness" data-concern="oiliness" style="top:50%; left:50%; width:24px; height:60px;" hidden></div>
+
+        <!-- Radiance: overall warm glow across the whole face, not
+             a localized spot — sized to cover most of the photo -->
+        <div class="marker marker-radiance" data-concern="radiance" style="top:48%; left:48%; width:200%; height:200%;" hidden></div>
+      </div>
+
+      <!-- Stats bar: Skin Health / Skin Age -->
+      <div class="stats-bar">
+        <div class="stats-bar-item">
+          <div class="stats-bar-value">71</div>
+          <div class="stats-bar-label">Skin Health</div>
+        </div>
+        <div class="stats-bar-divider"></div>
+        <div class="stats-bar-item">
+          <div class="stats-bar-value">26</div>
+          <div class="stats-bar-label">Skin Age</div>
+        </div>
+      </div>
+
+      <!-- Card: scrollable concern icons + actions -->
+      <div class="results-card">
+
+        <div class="concern-scroll" id="concernScroll">
+          <button class="concern-item active" type="button" data-concern="redness">
+            <span class="concern-ring red">88</span>
+            <span class="concern-name">Redness</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="hydration">
+            <span class="concern-ring blue">64</span>
+            <span class="concern-name">Hydration</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="dark-circles">
+            <span class="concern-ring neutral">80</span>
+            <span class="concern-name">Dark Circles</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="moisture">
+            <span class="concern-ring neutral">86</span>
+            <span class="concern-name">Moisture</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="spots">
+            <span class="concern-ring red">60</span>
+            <span class="concern-name">Spots</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="eyebags">
+            <span class="concern-ring blue">88</span>
+            <span class="concern-name">Eyebags</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="wrinkles">
+            <span class="concern-ring blue">87</span>
+            <span class="concern-name">Wrinkles</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="acne">
+            <span class="concern-ring red">53</span>
+            <span class="concern-name">Acne</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="pores">
+            <span class="concern-ring neutral">68</span>
+            <span class="concern-name">Pores</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="uv-damage">
+            <span class="concern-ring blue">79</span>
+            <span class="concern-name">UV Damage</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="oiliness">
+            <span class="concern-ring blue">85</span>
+            <span class="concern-name">Oiliness</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="texture">
+            <span class="concern-ring neutral">–</span>
+            <span class="concern-name">Texture</span>
+          </button>
+          <button class="concern-item" type="button" data-concern="radiance">
+            <span class="concern-ring blue">84</span>
+            <span class="concern-name">Radiance</span>
+          </button>
+          <!-- TODO: confirm whether Radiance is the final concern in
+               the 16+ total, or more follow after it -->
+        </div>
+
+        <div class="results-actions">
+          <button class="secondary-btn" type="button" id="fullReportBtn">See full report</button>
+          <button class="primary-btn narrow" type="button" id="recommendedBtn">Recommended products</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

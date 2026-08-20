@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reviews &amp; Rating — Purest Solutions</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="screen">
+
+      <div class="products-header">
+        <h1 class="page-title">Reviews &amp; Rating</h1>
+        <button class="icon-btn" aria-label="Close" onclick="window.location.href='product-details.html'">&#10005;</button>
+      </div>
+
+      <div class="rr-summary">
+        <div class="rr-score">
+          <span class="rr-score-number">4.5</span>
+          <span class="rr-stars" aria-hidden="true">★★★★★</span>
+          <span class="rr-count">320 ratings</span>
+        </div>
+        <div class="rr-bars">
+          <!-- TODO: exact per-star counts approximated from a small
+               screenshot — confirm real numbers before finalizing -->
+          <div class="rr-bar-row"><span>5</span><div class="rr-bar"><div class="rr-bar-fill" style="width: 80%;"></div></div></div>
+          <div class="rr-bar-row"><span>4</span><div class="rr-bar"><div class="rr-bar-fill" style="width: 55%;"></div></div></div>
+          <div class="rr-bar-row"><span>3</span><div class="rr-bar"><div class="rr-bar-fill" style="width: 15%;"></div></div></div>
+          <div class="rr-bar-row"><span>2</span><div class="rr-bar"><div class="rr-bar-fill" style="width: 6%;"></div></div></div>
+          <div class="rr-bar-row"><span>1</span><div class="rr-bar"><div class="rr-bar-fill" style="width: 3%;"></div></div></div>
+        </div>
+      </div>
+
+      <a href="write-review.html" class="write-review-link">Write a review</a>
+
+      <div class="rr-filter-row">
+        <button class="filter-pill active" type="button" data-filter="recent">Recent</button>
+        <button class="filter-pill" type="button" data-filter="high">Rating 4-5</button>
+        <button class="filter-pill" type="button" data-filter="low">Rating 0-3</button>
+      </div>
+
+      <!-- TODO: reviewer names and review text below are
+           best-effort transcriptions from a small screenshot —
+           several words were not clearly legible. Confirm exact
+           wording against Figma/source data before treating this
+           as final content. -->
+      <div class="rr-list">
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Ujjwal K.</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="rr-review-text">
+            Have been using CPB products for a while now and this is
+            amazing, it left the skin feeling soft. Wasn't sure about
+            using it at first but glad I did.
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Jinny Nata</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★☆</span>
+          </div>
+          <p class="rr-review-text">
+            Love this product, I don't know what difference using CPB
+            has made to my skin. Customer service is amazing too.
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Meng Yi Le</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="rr-review-text">
+            CPB was recommended to me by my dermatologist and I've
+            been using retinol products ever since. They are truly
+            outstanding, from the products to the customer service.
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Khoo Xuan</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★☆</span>
+          </div>
+          <p class="rr-review-text">
+            Not quite matte.
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Kimi Patel</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★☆</span>
+          </div>
+          <p class="rr-review-text">
+            CPB was recommended to me by my dermatologist as well —
+            I've been using retinol products ever since. They are
+            truly outstanding, from the products to the customer
+            service.
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Isabell Lelly</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="rr-review-text">
+            OMG, my skin has never looked better and has literally
+            transformed since using CPB products. The kit I was
+            recommended is so amazing!
+          </p>
+        </div>
+
+        <div class="rr-review">
+          <div class="rr-review-header">
+            <span class="rr-reviewer">Alex A.</span>
+            <span class="rr-review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="rr-review-text">
+            Absorbs really well, but got some itching or peeling at
+            first.
+          </p>
+        </div>
+
+      </div>
+
+      <button class="secondary-btn" type="button" id="showMoreBtn">Show more</button>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
